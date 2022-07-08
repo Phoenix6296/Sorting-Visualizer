@@ -4,16 +4,15 @@ const swap = (arr, i, j) => {
     arr[j] = temp
 }
 
-const bubbleSort = (blocks) => {
+const BubbleSort = (blocks) => {
 
     const dupBlocks = blocks.slice() // copying blocks array
     const order = []
 
     let i, j
-    
+
     for (i = 0; i < dupBlocks.length; i++) {
         for (j = 0; j < dupBlocks.length - i - 1; j++) {
-
             order.push([j, j + 1, null, null])                  // Compare
             if (dupBlocks[j] > dupBlocks[j + 1]) {
                 swap(dupBlocks, j, j + 1)
@@ -26,5 +25,5 @@ const bubbleSort = (blocks) => {
     return order
 }
 
-export default bubbleSort
+export default BubbleSort
 

@@ -4,13 +4,13 @@ const swap = (arr, i, j) => {
     arr[j] = temp
 }
 
-const selectionSort = (blocks) => {
+const SelectionSort = (blocks) => {
 
     const dupBlocks = blocks.slice() // copying blocks array
     const order = []
 
     let i, j
-    
+
     for (i = 0; i < dupBlocks.length; i++) {
         for (j = i + 1; j < dupBlocks.length; j++) {
 
@@ -26,4 +26,4 @@ const selectionSort = (blocks) => {
     return order
 }
 
-export default selectionSort
+export default SelectionSort

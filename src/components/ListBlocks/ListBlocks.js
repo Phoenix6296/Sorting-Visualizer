@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './ListBlocks.css'
 
-function ListBlocks({ blocks, compare, sorted, swap }){
+function ListBlocks({ blocks, compare, sorted, swap }) {
     const [width, setWidth] = useState(Math.min(20, Math.ceil(window.innerWidth / blocks.length) - 5))
     const color = blocks.length <= 50 && width > 14 ? 'black' : 'transparent'
 
@@ -23,22 +23,22 @@ function ListBlocks({ blocks, compare, sorted, swap }){
                 let bg = 'turquoise'
 
                 // i th element is being compared with some other element
-                if(compare && (i === compare[0] || i === compare[1])){
+                if (compare && (i === compare[0] || i === compare[1])) {
                     bg = '#ffff50'
                 }
 
-                if(swap && (i === swap[0] || i === swap[1])){
-                    bg='red'
+                if (swap && (i === swap[0] || i === swap[1])) {
+                    bg = 'red'
                 }
                 // i th element is in its correct position
-                if(sorted && sorted.includes(i)){
+                if (sorted && sorted.includes(i)) {
                     bg = '#4bc52e'
                 }
 
                 const style = {
                     'backgroundColor': bg,
-                    'color': color, 
-                    'height': height, 
+                    'color': color,
+                    'height': height,
                     'width': width
                 }
                 return (<div key={i} className='block' style={style}>{block}</div>)
